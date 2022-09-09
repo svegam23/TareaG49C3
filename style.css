@@ -1,5 +1,5 @@
 body{
-    margin: 0;
+    margin: auto;
 	padding: 0;
 	border: 0;
 
@@ -11,13 +11,14 @@ body{
 }
 /*Cuerpo*/
 
-/*Equipo*/
 
+/*Equipo*/
 .equipo{
-    width: 100%;
+    /*width: 100%;
+    height: auto;*/
     padding: 5px;
-    align-items: center;
-    background:linear-gradient(45deg, rgb(178, 178, 231),rgb(87, 87, 201), gold);
+    /*align-items: center;*/
+    background:linear-gradient(45deg, rgb(178, 178, 231),rgb(149, 149, 202), rgb(149, 201, 206),rgb(135, 135, 163), rgb(187, 216, 216));
 }
 
 .equipoTitulo{
@@ -27,129 +28,69 @@ body{
     font-size: 3em;
 }
 
-.equipo div{
-    width: 18%;
-    height: 400px;
-    margin-left: 15px;
-    border: solid 2px black;
-    border-radius: 15px;
-    align-items: center;
-    display: inline-block;
+.contenedorEquipo{
+   /* padding: 0 15px 0 4em;*/
+    display: grid;
+    grid-template-columns: repeat(5, 19%);
+    grid-template-rows: auto;
+    gap: 1em;
+    justify-items: center;
 }
 
+.contenedorEquipo div{
+/*    width: 18%;
+    height: auto;
+    margin-left: 15px;*/
+    border: solid 2px black;
+    border-radius: 15px;
+    justify-items: center;
+ /*   display: inline-block;*/
+}
+
+.contenedorEquipo div:hover{
+    border: solid 3px blue;
+}
 
 .foto{
-    width: 90%;
+    width: 75%;
     height: 150px;
-    margin: 15px 15px 0 15px;
+    margin: 15px 15px 0 25px;
     border-radius: 5px;
+    transition: 400ms;
+    box-shadow: 10px 10px 35px 5px rgb(47, 45, 45);
+}
+
+.foto:hover{
+    opacity: 0.7;
 }
 
 .integrante{
     font-family: 'Lobster Two', cursive;
     text-align: center;
+    font-size: 1.5em;
 }
 
 .descripcion{
     margin: 0 10px;
     font-family: 'Changa', sans-serif;
-    font-size: 13px;
+    font-size: 15px;
 }
 /*Pie de página*/
 
 
 /*responsive de EQUIPO*/
 @media screen and (min-width: 1024px) and (max-width: 1300px){
-    .equipo{
-        width:auto;
-        padding: 8px;
-    }
-
-    .equipo div{
-        width: 180px;
-        height: 550px;
-        margin: 5px;
-        display: inline-block;
-    }
-    .foto{
-        width: 90%;
-        height: 150px;
-        margin: 8px;
-    } 
+    
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px){
-    .equipo{
-        width:auto;
-        padding: 8px;
-    }
-
-    .equipo div{
-        width: 160px;
-        height: 550px;
-        margin: 5px;
-        display: inline-table;
-    }
-    .foto{
-        width: 90%;
-        height: 150px;
-        display: block;
-        margin: 8px;
-    }
+    
 }
 
 @media screen and (min-width: 480px) and (max-width: 768px){
-    .equipo{
-        width:auto;
-        padding: 10px;
-        margin-left: 0;
-    }
-
-    .equipo div{
-        width: 350px;
-        height: 400px;
-        margin: 10px;
-        display: inline;
-        border: none;
-    }
     
-    .foto{
-        width: 480px;
-        height: 200px;
-        display: block;
-        margin: 0 auto;
-    }
-
-    .descripcion{
-        margin-bottom: 30px;
-        font-size: 25px;
-    }
 }
 
 @media screen and (max-width: 480px){
-    .equipo{
-        width: auto;
-        padding: 10px;
-        margin-left: 0;
-    }
-    .equipo div{
-        width: 350px;
-        height: 500px;
-        margin: 10px;
-        display: block;
-        border: none;
-    }
-
-    .foto{
-        width: auto;
-        margin: 15px;
-    }
     
-    .integrante{
-        margin-top: 5px;
-    }
-
-    .descripcion{
-        font-size: 18px;
-    }
 }
